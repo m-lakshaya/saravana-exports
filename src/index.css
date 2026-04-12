@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300 antialiased;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background-light dark:bg-background-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/50 hover:bg-primary transition-colors rounded-full;
+}
